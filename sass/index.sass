@@ -1,0 +1,609 @@
+@charset "utf-8"
+@import "var.sass"
+
+.go_top
+	display: none
+
+*
+	font-weight: 500
+
+h2.h2_txt
+	+fontH2
+	font-weight: 500
+h3.h3_txt
+	+fontH3
+p.p_txt
+	+fontP
+	br.m
+		display: none
+		+rwd(1024px)
+			display: block
+
+iframe
+	position: absolute
+	top: -100vh
+	z-index: -100
+
+
+article
+	overflow: hidden
+	position: relative
+	z-index: 1
+	font-size: 24px
+	+rwd(1280px)
+		font-size: 20px
+	+rwd(1024px)
+		padding-top: 12vw
+		font-size: 3.75vw
+	section.banner
+		width: 100%
+		padding-bottom: 54.37%
+		// padding-bottom: 62.37%
+		background-image: url('../images/banner.png')
+		background-size: 100%
+		background-position: center top
+		background-repeat: no-repeat
+		position: relative
+		transition: 1s
+		.content
+			position: absolute
+			top: 90px
+			left: 150px
+			figure.slogan
+				width: 725px
+				margin-bottom: 2em
+		figure.logo
+			width: 100px
+			position: absolute
+			top: 10px
+			right: 50px
+		+rwd(1280px)
+			// width: 100%
+			// padding-bottom: 62.37%
+			// background-size: 100%
+			.content
+				top: 45px
+				left: 75px
+				figure.slogan
+					width: 460px
+			figure.logo
+				// width: 100px
+				// top: 10px
+				// right: 50px
+		+rwd(1024px)
+			padding-bottom: 134.6%
+			// background-size: 180%
+			// background-position: 85% top
+			background-image: url('../images/banner_m.png')
+			.content
+				width: 85.33%
+				top: 13%
+				left: 0
+				right: 0
+				margin: auto
+				figure.slogan
+					width: 100%
+			figure.logo
+				display: none
+
+	section.part01
+		width: 100%
+		padding: 170px 0
+		margin-top: -150px
+		position: relative
+		z-index: 4
+		// padding-bottom: 150px
+		.light
+			width: 1195px
+			height: 120px
+			background-image: url('../images/light.png')
+			background-size: 100%
+			background-position: center center
+			background-repeat: no-repeat
+			position: absolute
+			bottom: 0
+			right: -360px
+			transform: translateY(50%)
+			z-index: 5
+		// 	opacity: 0
+		// 	transition: opacity .5s
+		// &.active
+		// 	.light
+		// 		opacity: 1
+		figure.dec_l,figure.dec_r
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			z-index: 2
+		figure.dec_l
+			width: 1440px
+			left: -900px
+		figure.dec_r
+			width: 1487px
+			right: -900px
+		h3.h3_txt
+			// padding: 70px 0
+			// margin-bottom: 150px
+			text-align: center
+			position: relative
+			z-index: 3
+			br.m
+				display: none
+		+rwd(1280px)
+			// width: 100%
+			padding: 150px 0
+			// margin-top: -150px
+			.light
+				// width: 1195px
+				// height: 120px
+				// right: -360px
+			figure.dec_l,figure.dec_r
+			figure.dec_l
+				width: 1280px
+				left: -880px
+			figure.dec_r
+				width: 1380px
+				right: -880px
+			h3.h3_txt
+		+rwd(1024px)
+			// width: 100%
+			padding: 19vw 0
+			margin-top: -16vw
+			.light
+				width: 100%
+				height: 0%
+				padding-bottom: 10%
+				right: -20%
+			figure.dec_l,figure.dec_r
+				transform: none
+			figure.dec_l
+				width: 80%
+				left: -45%
+				top: 0
+			figure.dec_r
+				width: 81%
+				right: -45%
+				bottom: 0
+			h3.h3_txt
+				br.m
+					display: block
+	section.part02
+		width: 100%
+		padding-bottom: 60.7%
+		background-image: url('../images/pic_01.png')
+		background-size: 100%
+		background-position: center top
+		background-repeat: no-repeat
+		position: relative
+		z-index: 3
+		.content
+			width: 600px
+			position: absolute
+			left: 160px
+			bottom: 160px
+			.h2_txt
+				// margin-bottom: 30px
+				margin-bottom: 0.55em
+		+rwd(1280px)
+			// width: 100%
+			// padding-bottom: 60.7%
+			// background-size: 100%
+			.content
+				width: 440px
+				left: 40px
+				bottom: 60px
+				.h2_txt
+					// margin-bottom: 30px
+					// margin-bottom: 0.55em
+		+rwd(1024px)
+			padding-bottom: 117.73%
+			// padding-bottom: 105%
+			background-image: url('../images/pic_01_m.png')
+			.content
+				width: 81%
+				left: 0
+				right: 0
+				bottom: 10%
+				margin: auto
+				.h2_txt
+					// margin-bottom: 30px
+					// margin-bottom: 0.55em
+	section.part03
+		width: 100%
+		margin-top: -60px
+		padding-bottom: 37.02%
+		position: relative
+		z-index: 3
+		.light_top
+			width: 1195px
+			height: 120px
+			background-image: url('../images/light.png')
+			background-size: 100%
+			background-position: center center
+			background-repeat: no-repeat
+			position: absolute
+			top: 0px
+			right: -180px
+			transform: translateY(-50%)
+			z-index: 5
+		.light_bottom
+			width: 1195px
+			height: 120px
+			background-image: url('../images/light.png')
+			background-size: 100%
+			background-position: center center
+			background-repeat: no-repeat
+			position: absolute
+			bottom: 0
+			left: -360px
+			transform: translateY(50%)
+			z-index: 5
+		.bg
+			background-image: url('../images/pic_02.png')
+			background-size: 100%
+			background-position: center top
+			background-repeat: no-repeat
+			width: 110%
+			height: 100%
+			position: absolute
+			top: 0
+			right: 0
+			z-index: 2
+		.content
+			width: 432px
+			position: absolute
+			right: 180px
+			top: 50%
+			transform: translateY(-50%)
+			z-index: 3
+			.h2_txt
+				// margin-bottom: 30px
+				margin-bottom: 0.55em
+		+rwd(1280px)
+			margin-top: -40px
+			// width: 100%
+			// padding-bottom: 37.02%
+			// background-size: 110%
+			.light_top
+				// width: 1195px
+				// height: 120px
+				// right: -180px
+			.light_bottom
+				// width: 1195px
+				// height: 120px
+				// left: -360px
+			.content
+				width: 360px
+				right: 40px
+				.h2_txt
+					// margin-bottom: 0.55em
+		+rwd(1024px)
+			margin-top: 0px
+			padding-bottom: 126.666667%
+			// padding-bottom: 95%
+			// background-size: 100%
+			.light_top
+				width: 100%
+				height: 0%
+				padding-bottom: 10%
+				right: -40%
+			.light_bottom
+				width: 100%
+				height: 0%
+				padding-bottom: 10%
+				left: -40%
+			.bg
+				background-image: url('../images/pic_02_m.png')
+				width: 136%
+			.content
+				width: 81%
+				left: 0
+				right: 0
+				bottom: 15%
+				top: auto
+				margin: auto
+				transform: none
+				.h2_txt
+					// margin-bottom: 0.55em
+	section.part04
+		width: 100%
+		padding-bottom: 37.08%
+		position: relative
+		z-index: 2
+		.light
+			width: 1195px
+			height: 120px
+			background-image: url('../images/light.png')
+			background-size: 100%
+			background-position: center center
+			background-repeat: no-repeat
+			position: absolute
+			bottom: 0
+			right: 60px
+			transform: translateY(50%)
+			z-index: 5
+		+after
+			width: 500px
+			height: 232px
+			background: linear-gradient(-90deg,rgba(#006699,.6) 0%,rgba(#006699,.0) 100%)
+			transform: skewX(-24.2deg)
+			position: absolute
+			// right: 148px
+			right: 3.2%
+			bottom: -38px
+			z-index: 1
+		.bg
+			background-image: url('../images/pic_03.png')
+			background-size: 100%
+			background-position: center top
+			background-repeat: no-repeat
+			width: 110%
+			height: 100%
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 2
+			+before
+				width: 100%
+				height: 100%
+				transform: skewX(-24.2deg)
+				position: absolute
+				top: 0
+				right: 7.7%
+				z-index: -1
+				box-shadow: 17px 17px 46px rgba(#000,.33)
+		.content
+			width: 410px
+			position: absolute
+			left: 140px
+			top: 50%
+			transform: translateY(-50%)
+			z-index: 3
+			.h2_txt
+				// margin-bottom: 30px
+				margin-bottom: 0.55em
+		+rwd(1280px)
+			width: 100%
+			padding-bottom: 37.08%
+			.light
+				// width: 1195px
+				// height: 120px
+				// right: 60px
+			&:after
+				// width: 500px
+				// height: 232px
+				// background: linear-gradient(-90deg,rgba(#006699,.6) 0%,rgba(#006699,.0) 100%)
+				// transform: skewX(-24.2deg)
+				// right: 148px
+				right: 7%
+				bottom: -20px
+			.bg
+				// background-size: 112%
+			.content
+				width: 340px
+				left: 40px
+				.h2_txt
+					// margin-bottom: 0.55em
+		+rwd(1024px)
+			width: 100%
+			// padding-bottom: 132%
+			padding-bottom: 126.666667%
+			.light
+				width: 100%
+				height: 0%
+				padding-bottom: 10%
+				right: -0%
+			&:after
+				width: 53.333333%
+				height: 20%
+				right: 7%
+				bottom: -20px
+			.bg
+				background-image: url('../images/pic_03_m.png')
+				width: 136%
+				// background-size: 112%
+				&:before
+					right: 14.7%
+			.content
+				width: 77%
+				left: 0
+				right: 0
+				bottom: 10%
+				top: auto
+				margin: auto
+				transform: none
+				.h2_txt
+					// margin-bottom: 0.55em
+
+
+
+	section.form
+		+clearfix
+		max-width: 1000px
+		padding: 175px 15px
+		margin: auto
+		h2.h2_txt
+			+fontH2
+			margin-bottom: 1em
+		.area1
+			padding-right: 40px
+		.area2
+			padding-right: 9px
+		.area
+			width: 50%
+			font-weight: bold
+			box-sizing: border-box
+			float: left
+			.sub_title
+				+fontP
+				margin-left: 115px
+				margin-bottom: 20px
+			.row
+				margin-bottom: 1em
+				+clearfix
+				p.form_title
+					+fontForm
+					float: left
+					width: 115px
+					line-height: 30px
+					text-align: right
+					padding-right: 15px
+					box-sizing: border-box
+				input,.sex_radio,select,.company_city
+					float: left
+					width: calc(100% - 115px)
+					padding: 1.5px 0
+					// margin-left: -4px
+				
+				input
+					+fontForm
+					color: #4e4e4e
+					box-sizing: border-box
+				.sex_radio
+					input[type="radio"]
+						width: auto
+						margin: 0
+						float: none
+						+dib
+						// position: absolute
+						// top: 50%
+						// left: 0px
+						// transform: translateY(-50%)
+					.label
+						+fontForm
+						+dib
+						font-family: Microsoft JhengHei, sans-serif
+						margin-right: 20px
+						transform: translateY(-6%)
+				select
+					+fontForm
+					width: auto
+					padding: 2.5px 0
+					color: #4e4e4e
+					box-sizing: border-box
+					font-family: Microsoft JhengHei, sans-serif
+					option
+						color: #4e4e4e
+				.company_city
+					padding: 0
+					+clearfix
+					position: relative
+					input[name="zipcode"]
+						width: 50px
+						margin-left: 8px
+						float: left
+						position: absolute
+						right: 0
+						z-index: 5
+					.zipBox
+						float: right
+						p
+							+fontForm
+							line-height: 30px
+							float: left
+						input#zip,input[name="zipcode"]
+							width: 50px
+							margin-left: 8px
+							float: left
+					select
+						margin-right: 10px
+			.checklist
+				margin-bottom: 12px
+				input#agree
+					float: none
+					display: inline-block
+					vertical-align: top
+					margin: 3.5px 0
+					margin-left: 87px
+					margin-right: 9px
+				label.checkbox_info
+					+fontFooter
+					width: calc(100% - 115px)
+					display: inline-block
+					vertical-align: top
+			.blueBtn
+				display: block
+				width: calc(100% - 115px)
+				height: 2.5em
+				margin-left: 115px
+				cursor: pointer
+				text-align: center
+				background-repeat: no-repeat
+				background-size: cover
+				background-image: url(../images/blueBtn.jpg)
+				opacity: 1
+				line-height: 2.5em
+				font-size: 1em
+				font-weight: bold
+				+hover
+					background: #0653b6
+		+rwd(1024px)
+			padding: 50px 15px
+			h2.h2_txt
+				+fontH2
+				margin-bottom: 1em
+			.area1
+				padding-right: 40px
+			.area2
+				padding-right: 9px
+				margin-top: 3em
+			.area
+				width: 100%
+				float: none
+				.sub_title
+					margin-left: 0
+					margin-bottom: .5em
+				.row
+					// margin-bottom: 1em
+					p.form_title
+						width: 80px
+						// line-height: 30px
+						// padding-right: 15px
+					input,.sex_radio,select,.company_city
+						width: calc(100% - 80px)
+						// padding: 1.5px 0
+						// margin-left: -4px
+					
+					input
+					.sex_radio
+						.sex_box
+							// width: 30px
+							// padding: 0 15px
+							input[type="radio"]
+								width: auto
+							.label
+					select
+						width: 70px
+						// padding: 2.5px 0
+					.company_city
+						input[name="zipcode"]
+							width: 50px
+						.zipBox
+							p
+								display: none
+							input#zip
+								width: 50px
+								// margin-left: 8px
+						select
+				.checklist
+					input#agree
+						// margin: 3.5px 0
+						margin-left: 54px
+						// margin-right: 9px
+					label.checkbox_info
+						width: calc(100% - 85px)
+						font-size: 0.75em
+				.blueBtn
+					width: 100%
+					margin-left: 0px
+					font-size: 1.334em
+
+
+
+			
+
+
+
+
+
+

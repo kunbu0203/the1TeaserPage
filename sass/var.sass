@@ -1,0 +1,143 @@
+=rwd($w)
+  @media only screen and (max-width: $w)
+    @content
+=minW($w)
+  @media only screen and (min-width: $w)
+    @content
+=rwdh($h:900px)
+  @media only screen and (max-height: $h)
+    @content
+=minH($h:900px)
+  @media only screen and (min-height: $h)
+    @content
+
+
+=clearfix
+  &:after
+    content: ''
+    display: block
+    clear: both
+
+=wrapperStyle
+  max-width: 1440px
+  margin: auto
+  padding: 0 20px
+  box-sizing: border-box
+  
+=keyframes($name)
+	@-webkit-keyframes #{$name}
+		@content
+	@-moz-keyframes #{$name}
+		@content
+	@-ms-keyframes #{$name}
+		@content
+	@keyframes #{$name}
+		@content 
+=animation($content)
+	-webkit-animation: $content
+	-moz-animation: $content
+	-o-animation: $content
+	animation: $content
+
+=before($txt:'')
+  &:before
+    content: $txt
+    display: block
+    @content
+
+=after($txt:'')
+  &:after
+    content: $txt
+    display: block
+    @content
+
+=hover($w:768px)
+  @media only screen and (min-width: $w)
+    &:hover
+      @content
+
+
+=pstc0($t:0,$l:0,$b:0,$r:0)
+  position: absolute
+  top: $t
+  bottom: $b
+  left: $l
+  right: $r
+  margin: auto
+
+=pstc5($t:50%,$l:50%)
+  position: absolute
+  top: $t
+  left: $l
+  transform: translate(-50%,-50%)
+
+// =fontH1()
+//   font-size: 52px
+//   line-height: 1.5
+//   +rwd(768px)
+//     font-size: 33px
+  
+=fontH2()
+  font-size: 2.25em
+  // line-height: 1.5
+  +rwd(1024px)
+    font-size: 2.56em
+  //   font-size: 22px
+  
+=fontH3()
+  font-size: 1.33em
+  line-height: 1.5
+  +rwd(1024px)
+    font-size: 1.13778em
+  //   font-size: 18px
+  
+=fontP()
+  font-size: 1em
+  line-height: 1.5
+  +rwd(1024px)
+    font-size: 1.14em
+  //   font-size: 14px
+  
+=fontForm()
+  font-size: 0.66em
+  line-height: 1.5
+  +rwd(1024px)
+    font-size: 1.14em
+  // +rwd(768px)
+  //   font-size: 14px
+  
+=fontFooter()
+  font-size: 0.58em
+  line-height: 1.5
+  +rwd(1024px)
+    font-size: 0.75em
+  //   font-size: 12px
+
+=dib
+  display: inline-block
+  vertical-align: middle
+
+
+@font-face
+  font-family: "BMWGlobalReg"
+  src: url('../fonts/BMWGlobalReg.woff')
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,500,700|Oswald:200,400&display=swap')
+
+*
+  font-family: "BMWGlobalReg",Microsoft JhengHei, sans-serif
+  color: #fff
+
+a
+  text-decoration: none
+  color: #fff
+
+img
+  width: 100%
+  vertical-align: top
+
+$blue: #004266
+// $red: #851e1f
+// $yellow: #e7c562
+// $gray: #b9b9b9
+// $brown: #612000

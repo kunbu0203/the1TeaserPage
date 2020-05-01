@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "BMWGlobalReg";
+  src: url("../fonts/BMWGLOBAL_PRO_REG_0.TTF"); }
+
+* {
+  font-family: "BMWGlobalReg",Microsoft JhengHei, sans-serif;
+  color: #fff; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+img {
+  width: 100%;
+  vertical-align: top; }

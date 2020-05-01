@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+html(lang="zh-Hant")
+	head
+		include ../includes/meta.pug
+		include ../includes/link.pug
+		link(rel="stylesheet", href="./css/index.css")
+	body
+		include ../includes/head.pug
+		.body_bg
+
+		audio#webAudio(autoplay loop preload="auto" mute)
+			source(src='./files/music.mp3', type='audio/mpeg')
+			| Your browser does not support the audio element.
+
+		//- iframe#webAudio(allow="autoplay" src="https://local.design-ebg.com/case/bmw/audio.html")
+		.sound_controls
+			p SOUND
+			.svg_box
+				.play
+					include ../includes/sound_svg.pug
+				.pause
+					include ../includes/pause_svg.pug
+
+
+		article
+			section.banner
+				.content
+					figure.slogan
+						img(src="./images/slogan.png", alt="")
+					h3.h3_txt
+						| 全新世代BMW 1系列即將登場
+					//- h3.h3_txt
+					//- 	| 全新 BMW 1 系列 突破慣性登場
+					//- 	br
+					//- 	| 11月1日正式上市
+				figure.logo
+					img(src="./images/logo.png", alt="")
+			section.part01
+				.light
+				figure.dec_l
+					img(src="./images/decoration_l.png", alt="")
+				figure.dec_r
+					img(src="./images/decoration_r.png", alt="")
+				h3.h3_txt
+					| 有種人，突破慣性，是慣性；
+
+					//- br.m
+					//- | 豪華小型掀背房車的最佳詮釋，
+					br
+					| 不尋常規，是常規，一如全新世代BMW 1系列。
+					//- br.m
+					//- | 邀您搶先訂閱上市消息。
+				//- h3.h3_txt
+				//- 	| 全新世代 BMW 1 系列，
+				//- 	br.m
+				//- 	| 豪華小型掀背房車的最佳詮釋，
+				//- 	br
+				//- 	| 將以「THE ONE AND ONLY 有種不同」之態度，
+				//- 	br
+				//- 	| 於 11 月 1 日全台經銷商同步登場，
+				//- 	br.m
+				//- 	| 邀您搶先訂閱上市消息。
+			section.part02
+				.content
+					h2.h2_txt 放閃毫不保留
+					p.p_txt 全新世代BMW 1系列，新世代設計讓你高調放閃，視覺感強烈的車頭線條，與源自賽車靈感的雙腎型水箱護罩，渾身亮點，
+						br.m
+						| 到哪皆自成焦點。
+			section.part03
+				.light_top
+				.light_bottom
+				.bg
+				.content
+					h2.h2_txt 個性座艙很有型 
+					p.p_txt 
+						| 整體車室空間以新世代的設計思維貫穿，
+						br
+						| 入座桶型設計的M款雙前座跑車座椅，
+						br
+						| 你會感覺到，你，有種不同。
+			section.part04
+				.light
+				.bg
+				.content
+					h2.h2_txt 絕對熱血新動力 
+					p.p_txt 渾厚有勁的熱血聲浪來自最具爆發力的M Performance直列四缸引擎，加上Steptronic運動化八速手自排，動力
+						br.d
+						| 隨傳隨到，操控樂趣溢於言表。
+
+
+			section.form
+				h2.h2_txt 預約賞車
+				.area.area1
+					.sub_title 基本資料
+					.row
+						p.form_title 姓名
+						input#username(type='text', name='username')
+					.row.sex
+						p.form_title 性別
+						.sex_radio
+							input#male(type='radio', name='gender', value='1')
+							.label(for='male') 男
+							input#female(type='radio', name='gender', value='0')
+							.label(for='female') 女
+					.row
+						p.form_title 年齡
+						select#age(name='age')
+							option(value='20歲以下') 20歲以下
+					.row
+						p.form_title E-mail
+						input#email(type='text', name='email')
+					.row
+						p.form_title 手機號碼
+						input#mobile(type='tel', name='mobile', maxlength='10')
+					.row.addressBox
+						p.form_title 聯絡地址
+						.company_city
+							.zipBox
+								p 郵遞區號
+								input#zip(type='number', name='zip', readonly='')
+							#twzipcode
+							//- select#city.county(name='city')
+							//- 	option(value='') 選擇縣市
+							//- 	option(value='臺北市', data-index='0') 臺北市
+							//- 	option(value='基隆市', data-index='1') 基隆市
+							//- 	option(value='新北市', data-index='2') 新北市
+							//- 	option(value='宜蘭縣', data-index='3') 宜蘭縣
+							//- 	option(value='桃園市', data-index='4') 桃園市
+							//- 	option(value='新竹市', data-index='5') 新竹市
+							//- 	option(value='新竹縣', data-index='6') 新竹縣
+							//- 	option(value='苗栗縣', data-index='7') 苗栗縣
+							//- 	option(value='臺中市', data-index='8') 臺中市
+							//- 	option(value='彰化縣', data-index='9') 彰化縣
+							//- 	option(value='南投縣', data-index='10') 南投縣
+							//- 	option(value='嘉義市', data-index='11') 嘉義市
+							//- 	option(value='嘉義縣', data-index='12') 嘉義縣
+							//- 	option(value='雲林縣', data-index='13') 雲林縣
+							//- 	option(value='臺南市', data-index='14') 臺南市
+							//- 	option(value='高雄市', data-index='15') 高雄市
+							//- 	option(value='澎湖縣', data-index='16') 澎湖縣
+							//- 	option(value='金門縣', data-index='17') 金門縣
+							//- 	option(value='屏東縣', data-index='18') 屏東縣
+							//- 	option(value='臺東縣', data-index='19') 臺東縣
+							//- 	option(value='花蓮縣', data-index='20') 花蓮縣
+							//- 	option(value='連江縣', data-index='21') 連江縣
+							//- select#area.district(name='area')
+							//- 	option(value='', selected='') ---
+				.area.area2
+					.sub_title 希望與您聯絡的BMW經銷商
+					.row.store1
+						p.form_title 地區
+						select#reseller_city.reseller_city(name='reseller_city')
+							option(value='') 選擇地區
+							//- option(value='台北市') 台北市
+							//- option(value='新北市') 新北市
+							//- option(value='桃園') 桃園
+							//- option(value='新竹') 新竹
+							//- option(value='台中') 台中
+							//- option(value='南投') 南投
+							//- option(value='彰化') 彰化
+							//- option(value='雲嘉') 雲嘉
+							//- option(value='台南') 台南
+							//- option(value='高屏') 高屏
+							//- option(value='花蓮') 花蓮
+					.row.store2
+						p.form_title 經銷商
+						select#reseller_store.store(name='reseller_store')
+							option(value='') 選擇經銷商
+							//- option(value='台中汎德-文心展示中心/服務中心') 台中汎德-文心展示中心/服務中心
+							//- option(value='台中汎德-復興展示中心/服務中心') 台中汎德-復興展示中心/服務中心
+							//- option(value='台中汎德-崇德展示中心') 台中汎德-崇德展示中心
+					.checklist
+						input#agree(type='checkbox', name='agree', value='y')
+						label.checkbox_info(for='info_use')
+							| 我同意BMW總代理汎德股份有限公司得將本人之個人資料經電腦處理後， BMW總代理汎德股份有限公司及其所屬汎德股份有限公司其他關係企業暨其特約經銷商等使用，以及為提升客戶服務品質、車輛資訊之提供及推廣客戶關懷活動而使用。
+					#sentBtn.submitBtn.blueBtn(name='sentBtn', code='') 完成預約
+
+
+
+						
+		
+		include ../includes/footer.pug
+		include ../includes/js_link.pug
+		script(src="./js/var.js")
+		script(src="./js/index.js")
+		script(src="./js/form.js")
+		script(src="./js/tracking.js")
